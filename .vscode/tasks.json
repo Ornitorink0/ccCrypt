@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile and Build JAR",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "-d",
+                "bin",
+                "(Get-ChildItem -Recurse -Filter *.java).FullName"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Create JAR",
+            "type": "shell",
+            "dependsOn": "Compile and Build JAR",
+            "command": "jar",
+            "args": [
+                "cvfm",
+                "build/cccrypt.jar",
+                "src/META-INF/MANIFEST.MF",
+                "-C",
+                "bin",
+                "."
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
