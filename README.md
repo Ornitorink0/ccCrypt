@@ -1,6 +1,8 @@
 # CCCrypt
 
-CCCrypt is a Swing-based Java application for encrypting and decrypting messages. The application uses several encryption algorithms to protect user-entered data and offers additional features such as file management and user interface customization.
+*CCCrypt is a basilar Swing-based Java application for encrypting and decrypting messages*.
+
+It provides only one dynamic algorithm that varies based on the day of the year. The project was created for personal practice purposes only.
 
 ## Folder Structure
 
@@ -9,11 +11,14 @@ The workspace contains two folders by default, where:
 - `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Meanwhile, the compiled `.class` files will be generated in the `bin` folder by default.
 
 ## Requirements
+
 - Java 8 or higher
-- Standard Java libraries (Swing, AWT)
+- Standard Java libraries (Swing, AWT, etc.)
+
+It is strongly recommended to use `Extension Pack for Java` for Visual Studio Code (ID: `vscjava.vscode-java-pack`).
 
 ## Installation
 #### Clone the repository:
@@ -44,20 +49,23 @@ javac -d bin (Get-ChildItem -Recurse -Filter *.java).FullName
 jar cvfm build/cccrypt.jar src/META-INF/MANIFEST.MF -C bin .
 ```
 
+or you can simply run tasks in `.vscode/tasks.json` (CTRL + SHIFT + B) with the following order:
+1. **Compile and Build JAR**
+2. **Create JAR**
+
 To open the file use the command:
 
 ```shell
 java -jar build/cccrypt.jar
 ```
 
-or right click on the `cccrypt.jar` file and open with Java(TM) Platform SE Binary
+or right click on the `cccrypt.jar` file and open with Java(TM) Platform SE Binary.
 
 ## Usage
 
 ### Encryption:
 
 - Enter the message in the text field.
-
 - Click the "Encrypt" button to encrypt the message.
 
 The encrypted message will be displayed in the output section.
@@ -72,6 +80,7 @@ The decrypted message will be displayed in the output section.
 ### File Management:
 
 - Use the "Save" and "Load" buttons to save and load messages from files.
+- When performing an operation, click the "Copy" button to copy to the clipboard.
 
 ### Operation History:
 
