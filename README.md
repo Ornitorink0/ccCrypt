@@ -1,6 +1,6 @@
 # CCCrypt
 
-*CCCrypt is a basilar Swing-based Java application for encrypting and decrypting messages*.
+*CCCrypt is a Swing-based application for encrypting and decrypting messages using a dynamic algorithm*.
 
 It provides only one dynamic algorithm that varies based on the day of the year. The project was created for personal practice purposes only.
 
