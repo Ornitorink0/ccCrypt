@@ -28,6 +28,7 @@ import java.util.*;
 public class IndexPage extends JFrame {
     private JButton btnEncrypt = new JButton("Encrypt");
     private JButton btnDecrypt = new JButton("Decrypt");
+    private JButton btnChat = new JButton("Connect to Chat");
     private JTextArea txtaMessage = new JTextArea();
     private JPanel contentPane = new JPanel();
     private JButton btnSave = new JButton("Save");
@@ -47,13 +48,14 @@ public class IndexPage extends JFrame {
         contentPane.add(btnLoad);
         contentPane.add(btnEncrypt);
         contentPane.add(btnDecrypt);
+        contentPane.add(btnChat);
         this.add(contentPane, BorderLayout.PAGE_START);
         this.add(new JScrollPane(txtaMessage), BorderLayout.CENTER);
         this.add(new JScrollPane(lstHistory), BorderLayout.PAGE_END);
 
         // Frame Settings
         this.setLocationRelativeTo(null);
-        this.setMinimumSize(new Dimension(350, 400));
+        this.setMinimumSize(new Dimension(400, 400));
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.pack();
         this.setVisible(true);
@@ -83,6 +85,13 @@ public class IndexPage extends JFrame {
                     historyModel.addElement("Decrypted \"" + txtaMessage.getText() + "\" at " + new Date());
                     new Decrypt(txtaMessage.getText());
                 }
+            }
+        });
+        btnChat.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                historyModel.addElement("Chat requested at " + new Date());
+                new Chat();
             }
         });
     }
