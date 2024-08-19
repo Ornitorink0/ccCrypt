@@ -1,6 +1,6 @@
 /*
  * CCCrypt - Simple GUI Text Cryptor
- * By Matteo Gurrieri
+ * By Ornitorink0
  *
  * Licensed under the MIT License (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * 
- * @author Matteo Gurrieri
+ * @author Ornitorink0
  * @since 1.0
  */
 
