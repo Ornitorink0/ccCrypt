@@ -24,7 +24,7 @@ It is strongly recommended to use `Extension Pack for Java` for Visual Studio Co
 #### Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/cccrypt.git
+git clone https://github.com/Ornitorink0/ccCrypt.git
 ```
 
 #### Navigate to the project folder:
